@@ -50,7 +50,7 @@ public class FormController : Controller
     public IActionResult InputModelSimpleUndo(InputSimpleViewModel vm)
     {
         //Use the Service and populate the InputModel
-        vm.QuoteIM = new FamousQuoteIMa(_service.ReadQuote(vm.QuoteIM.QuoteId));          
+        vm.QuoteIM = new FamousQuoteIMa(_service.ReadQuote(vm.QuoteIM.QuoteId));
         vm.PageHeader = "Edit details of a quote";
         return View("InputModelSimple", vm);
     }
@@ -76,7 +76,7 @@ public class FormController : Controller
             //update the changes and save
             model = vm.QuoteIM.UpdateModel(model);
             model = _service.UpdateQuote(model);
-            
+
             vm.QuoteIM = new FamousQuoteIMa(model);
         }
 

@@ -37,7 +37,7 @@ public class ModelController : Controller
     public IActionResult Search(string search, int pagenr)
     {
         var vwm = new SearchViewModel(){ThisPageNr = pagenr, SearchFilter = search};
-        
+
         //Pagination
         vwm.UpdatePagination(_service);
 
